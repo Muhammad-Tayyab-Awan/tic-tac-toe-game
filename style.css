@@ -1,0 +1,231 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: "Forte Regular";
+}
+#discription {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes disclaim_reload {
+  from {
+    transform: translateY(-500px) rotate(-20deg);
+  }
+  to {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes name_reload {
+  from {
+    transform: translateY(-500px) rotate(-20deg);
+  }
+  to {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes name_color_chg {
+  from {
+    background: linear-gradient(90deg, yellow, orange);
+  }
+  to {
+    background: linear-gradient(180deg, yellowgreen, aqua);
+  }
+}
+.disclaim {
+  font-family: "Courier New";
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: justify;
+  text-transform: uppercase;
+  line-height: 25px;
+  text-shadow: 1px 5px black;
+  width: 400px;
+  height: 350px;
+  border-radius: 10%;
+  background-color: rgba(0, 128, 128, 0.75);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: disclaim_reload ease-in-out 1s 1 normal;
+}
+.name {
+  font-family: "Courier New";
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: justify;
+  text-transform: uppercase;
+  line-height: 25px;
+  text-shadow: 1px 5px black;
+  width: 450px;
+  height: 150px;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  border-top-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  background-color: teal;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  animation: name_reload ease-in-out 1s 1 normal,
+    name_color_chg linear 1s infinite normal;
+}
+.name input::-webkit-input-placeholder {
+  color: grey;
+  text-align: center;
+}
+.name input {
+  background-color: azure;
+  height: 30px;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 5px;
+}
+#next-name {
+  align-self: flex-end;
+  background: linear-gradient(45deg, red, purple);
+  color: white;
+  height: 40px;
+  font-size: 24px;
+  width: 75px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 25%;
+  cursor: pointer;
+}
+#next-play {
+  background: linear-gradient(45deg, red, purple);
+  color: white;
+  height: 40px;
+  font-size: 24px;
+  width: 75px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 25%;
+  cursor: pointer;
+}
+#game-body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: -1;
+}
+#heading {
+  background-color: crimson;
+  height: 10%;
+  color: cornsilk;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75em;
+}
+.container {
+  height: 80vh;
+  width: 100vw;
+  background: url(images/img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game {
+  width: 350px;
+  height: 350px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.box {
+  height: 115px;
+  width: 115px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  color: aquamarine;
+  font-size: 0px;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+.tick {
+  background: url(images/tick.png);
+  background-color: aquamarine;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.cross {
+  background: url(images/cross.png);
+  background-color: aquamarine;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+#turn-msg {
+  font-size: 40px;
+  color: azure;
+}
+#reset-btn {
+  background: linear-gradient(45deg, red, purple);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#new-btn {
+  background: linear-gradient(45deg, red, purple);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 5vh;
+}
+
+.msg-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, orange, red);
+}
+
+.hide {
+  display: none;
+}
